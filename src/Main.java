@@ -16,7 +16,7 @@ public class Main {
 
         System.out.print("Ingrese su edad: ");
         p.setEdad(input.nextInt());
-        input.nextLine();  // Limpiar buffer
+        input.nextLine();
 
         System.out.print("Ingrese su dirección: ");
         p.setDireccion(input.nextLine());
