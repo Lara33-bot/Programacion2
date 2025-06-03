@@ -25,13 +25,13 @@ public class Persona {
        public String getnumeroIdentificacion(){
               return numeroIdentificacion;
        }
-       public int getedad(){
+       public int getEdad(){
               return edad;
        }
-       public String getdireccion(){
+       public String getDireccion(){
               return direccion;
        }
-       public String gettelefono(){
+       public String getTelefono(){
               return telefono;
        }
 
@@ -44,6 +44,22 @@ public class Persona {
                      this.nombre = "No registrado";
               }
        }
+       public void setApellido (String nombre){
+              if (nombre != null && !nombre.trim().isEmpty()){
+                     this.apellido = apellido;
+              }
+              else
+              {
+                     this.apellido = "No registrado";
+              }
+       }
+       public void setNumeroIdentificacion(String numeroIdentificacion) {
+              if (numeroIdentificacion != null && !numeroIdentificacion.trim().isEmpty()) {
+                     this.numeroIdentificacion = numeroIdentificacion;
+              } else {
+                     this.numeroIdentificacion = "No registrado";
+              }
+       }
        public void setEdad (int edad){
               if (edad > 0){
                      this.edad = edad;
@@ -51,5 +67,27 @@ public class Persona {
               else {
                      this.edad = 0;
               }
+       }
+       public void setDireccion(String direccion) {
+              if (direccion != null && !direccion.trim().isEmpty()) {
+                     this.direccion = direccion;
+              } else {
+                     this.direccion = "No registrada";
+              }
+       }
+       public void setTelefono(String telefono) {
+              if (telefono != null && !telefono.trim().isEmpty()) {
+                     this.telefono = telefono;
+              } else {
+                     this.telefono = "No registrado";
+              }
+       }
+       public void mostrarDatosP (){
+              System.out.println("Nombre:" + getNombre());
+              System.out.println("Apellido:" + getApellido());
+              System.out.println("Numero Identificacion:" + getnumeroIdentificacion());
+              System.out.println("Edad:" + getEdad());
+              System.out.println("Direccion:" + getDireccion());
+              System.out.println("Telefono:" + getTelefono());
        }
 }
