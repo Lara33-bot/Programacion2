@@ -21,10 +21,10 @@ public class Main {
         System.out.print("Ingrese su dirección: ");
         p.setDireccion(input.nextLine());
 
-        System.out.print("Ingrese su teléfono: ");
+        System.out.println("Ingrese su teléfono: ");
         p.setTelefono(input.nextLine());
 
-        System.out.println("\n--- Datos ingresados ---");
+        System.out.println(" Datos ingresados ");
         p.mostrarDatosP();
     }
     }

@@ -36,7 +36,7 @@ public class Persona {
        }
 
        public void setNombre (String nombre){
-              if (nombre != null && !nombre.trim().isEmpty()){
+              if (nombre != null && !nombre.trim().isEmpty() && nombre.matches("[a-zA-ZáéíóúÁÉÍÓÚñÑ\\s]+")){
                      this.nombre = nombre;
               }
               else
@@ -44,8 +44,8 @@ public class Persona {
                      this.nombre = "No registrado";
               }
        }
-       public void setApellido (String nombre){
-              if (nombre != null && !nombre.trim().isEmpty()){
+       public void setApellido (String apellido){
+              if (nombre != null && !nombre.trim().isEmpty() && apellido.matches("[a-zA-ZáéíóúÁÉÍÓÚñÑ\\s]+")){
                      this.apellido = apellido;
               }
               else
@@ -61,7 +61,7 @@ public class Persona {
               }
        }
        public void setEdad (int edad){
-              if (edad > 0){
+              if (edad > 0 && edad < 100){
                      this.edad = edad;
               }
               else {
